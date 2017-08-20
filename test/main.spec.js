@@ -153,11 +153,11 @@ describe('CodeBreaker :', () => {
       window.getResults('1300');
       //add tests for starting and stopping divs?
       //add tests for each result?
-
+        
       var oks = (document.getElementById('results').innerHTML.match(/glyphicon-ok/g) || []).length;
       var transfers = (document.getElementById('results').innerHTML.match(/glyphicon-transfer/g) || []).length;
       var removes = (document.getElementById('results').innerHTML.match(/glyphicon-remove/g) || []).length;
-
+      
       assert(oks > 0, 'correct characters are not being marked as correct.');
       assert(oks < 2, 'some characters are being incorrectly marked as correct.');
       assert(transfers > 0, 'characters that were present in the answer, but not in the right position are not getting marked correctly.');
